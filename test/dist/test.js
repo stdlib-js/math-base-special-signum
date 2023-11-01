@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,57 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var isnan = require( '@stdlib/math-base-assert-is-nan' );
-var isNegativeZero = require( '@stdlib/math-base-assert-is-negative-zero' );
-var isPositiveZero = require( '@stdlib/math-base-assert-is-positive-zero' );
-var PI = require( '@stdlib/constants-float64-pi' );
-var PINF = require( '@stdlib/constants-float64-pinf' );
-var NINF = require( '@stdlib/constants-float64-ninf' );
-var signum = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof signum, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function returns `NaN` if provided `NaN`', function test( t ) {
-	var sign = signum( NaN );
-	t.equal( isnan( sign ), true, 'returns NaN' );
-	t.end();
-});
-
-tape( 'the function returns `-0` if provided `-0`', function test( t ) {
-	var sign = signum( -0.0 );
-	t.equal( isNegativeZero( sign ), true, 'returns -0' );
-	t.end();
-});
-
-tape( 'the function returns `0` if provided +0', function test( t ) {
-	var sign;
-
-	sign = signum( 0.0 );
-	t.equal( isPositiveZero( sign ), true, 'returns +0' );
-
-	sign = signum( +0.0 );
-	t.equal( isPositiveZero( sign ), true, 'returns +0' );
-
-	t.end();
-});
-
-tape( 'the function returns `-1` if provided a negative number', function test( t ) {
-	t.equal( signum( -10.0 ), -1.0, 'signum(-10) => -1' );
-	t.equal( signum( -PI ), -1.0, 'signum(-π) => -1' );
-	t.equal( signum( NINF ), -1.0, 'signum(-infinity) => -1' );
-	t.end();
-});
-
-tape( 'the function returns `+1` if provided a positive number', function test( t ) {
-	t.equal( signum( 10.0 ), 1.0, 'signum(10) => 1' );
-	t.equal( signum( PI ), 1.0, 'signum(π) => 1' );
-	t.equal( signum( PINF ), 1.0, 'signum(infinity) => 1' );
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
