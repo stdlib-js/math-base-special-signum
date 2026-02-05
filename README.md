@@ -65,7 +65,7 @@ for any real number `x`.
 ## Usage
 
 ```javascript
-import signum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-signum@esm/index.mjs';
+import signum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-signum@v0.2.3-esm/index.mjs';
 ```
 
 #### signum( x )
@@ -125,7 +125,7 @@ Table of results:
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
-import signum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-signum@esm/index.mjs';
+import signum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-signum@v0.2.3-esm/index.mjs';
 
 var opts = {
     'dtype': 'float64'
